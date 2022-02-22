@@ -43,20 +43,20 @@
                     </th>
                     <!--<th pSortableColumn="abstractText">Abstract Text <p-sortIcon field="abstractText"></p-sortIcon></th>
                     <th pSortableColumn="grantDate">Grant Date <p-sortIcon field="grantDate"></p-sortIcon></th>
-                    <th pSortableColumn="grantDocumentIdentifier">Grant Identifier <p-sortIcon field="grantDocumentIdentifier"></p-sortIcon></th>-->
+                    <th pSortableColumn="grantDocumentIdentifier">Grant Identifier <p-sortIcon field="grantDocumentIdentifier"></p-sortIcon></th>
                     <th pSortableColumn="inventionSubjectMatterCategory">
                         Invention Category 
                         <p-sortIcon field="inventionSubjectMatterCategory"></p-sortIcon>
-                    </th>
+                    </th>-->
 
                     <th pSortableColumn="assigneeEntityName">
                         Assignee 
                         <p-sortIcon field="assigneeEntityName"></p-sortIcon>
                     </th>
-                    <th pSortableColumn="assigneePostalAddressText">
+                    <!--<th pSortableColumn="assigneePostalAddressText">
                         Assignee Postal Address 
                         <p-sortIcon field="assigneePostalAddressText"></p-sortIcon>
-                    </th>
+                    </th>-->
                     <th pSortableColumn="inventionTitle">
                         Invention Title 
                         <p-sortIcon field="inventionTitle"></p-sortIcon>
@@ -85,10 +85,10 @@
                         </div>
                     </td>
                     <td>{{patent.grantDate}}</td>
-                    <td>{{patent.grantDocumentIdentifier}}</td>-->
-                    <td>{{patent.inventionSubjectMatterCategory}}</td>
+                    <td>{{patent.grantDocumentIdentifier}}</td>
+                    <td>{{patent.inventionSubjectMatterCategory}}</td>-->
                     <td>{{patent.assigneeEntityName}}</td>
-                    <td>{{patent.assigneePostalAddressText}}</td>
+                    <!--<td>{{patent.assigneePostalAddressText}}</td>-->
                     <td>{{patent.inventionTitle}}</td>
                     <td><a class="btn btn-link" target="_blank" href="{{patent.s3FilelocationURI}}" >
                             <button type="button" pButton pRipple icon="pi pi-file-pdf" 
