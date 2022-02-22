@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { PrimeNGConfig } from 'primeng/api';
 import { HttpClient } from '@angular/common/http';
+import { GlobalConstants } from '../common/GlobalConstants';
 
 @Component({
   selector: 'app-process-patents',
@@ -21,9 +22,12 @@ export class ProcessPatentsComponent implements OnInit {
     this.primengConfig.ripple = true;
   }
 
-  processPatents() {
-    this.http.post<any>('patents/process', this.patentsList).subscribe(message => {
-      this.sucessMessage = message;
+  public processPatents() {
+    this.http.post(GlobalConstants.REST_PATENT_PROCESS_URL, this.patentsList, {
+      responseType: 'text'
+    }).subscribe(res => {
+        this.sucessMessage = res;
+        this.patentsList='';
     });
 
   }

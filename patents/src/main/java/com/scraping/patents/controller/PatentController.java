@@ -33,7 +33,7 @@ public class PatentController {
      * @return String response message to the user
      */
     @PostMapping("/process")
-    public String processPatentData(@RequestBody String patentList) {
+    public String processPatentData(@RequestBody(required = false) String patentList) {
         return patentService.processPatents(patentList);
     }
 }

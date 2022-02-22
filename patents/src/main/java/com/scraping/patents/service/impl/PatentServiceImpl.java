@@ -132,6 +132,7 @@ public class PatentServiceImpl implements PatentService{
      * @return JSON Object of Patents
      */
     private ResponseEntity<APIResult> getPatentDetails(String externalRESTUrl) {
+        log.info("Getting patent metadata from external REST url..");
         RestTemplate restTemplate = new RestTemplate();
         restTemplate.setRequestFactory(new HttpComponentsClientHttpRequestFactory());
         return restTemplate.getForEntity(externalRESTUrl, APIResult.class);
