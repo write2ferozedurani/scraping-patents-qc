@@ -1,0 +1,38 @@
+<mat-drawer-container>
+    <mat-drawer mode="side" opened="true">
+        <app-leftnav></app-leftnav>
+    </mat-drawer>
+    <mat-drawer-content>
+        <router-outlet></router-outlet>
+    </mat-drawer-content>
+</mat-drawer-container>
+
+
+
+<!--<p-splitter [style]="{'height': '100%'}" [panelSizes]="[20,80]" [minSizes]="[10,0]" styleClass="mb-5">
+  
+  <ng-template pTemplate>
+      <p-splitter layout="vertical" [panelSizes]="[30,70]">
+          <ng-template pTemplate>
+              <div class="col flex align-items-center justify-content-center">
+                <h2>Demo: Patent Scraping Application</h2>
+              </div>
+          </ng-template>
+          <ng-template pTemplate>
+              <p-splitter [panelSizes]="[15,85]">
+                  <ng-template pTemplate>
+                      <div class="col flex align-items-center justify-content-center">
+                        <app-leftnav></app-leftnav>
+                      </div>
+                  </ng-template>
+                  <ng-template pTemplate>
+                      <div class="col flex align-items-center justify-content-center">
+                          <router-outlet></router-outlet>
+                      </div>
+                  </ng-template>
+              </p-splitter>
+          </ng-template>
+      </p-splitter>
+  </ng-template>
+</p-splitter>-->
+

@@ -1,0 +1,25 @@
+<div class="page">
+    <div class="d-flex box p-3 mt-2">Web scarping the Patents</div>
+    <div class="content shadow p-3 position-relative">
+
+        <div class="message">{{sucessMessage}}</div>
+
+        <div class="p-inputgroup">
+            <span class="p-inputgroup-addon"><i class="pi pi-list"></i></span>
+            <input
+                type="text" pInputText
+                [(ngModel)] = "patentsList"
+                placeholder="Enter Patent Application Number(s) as comma separated">
+        </div>
+
+        <div>
+            <p-button
+                label="Process Patent(s)"
+                class="p-button-sm"
+                icon="pi pi-cloud"
+                (click)="processPatents()">
+            </p-button>
+        </div>
+
+    </div>
+  </div>

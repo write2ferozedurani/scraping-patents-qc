@@ -1,0 +1,18 @@
+.mat-icon {
+    vertical-align: center;
+    margin-right: 1rem;
+}
+
+.header-nav {
+    vertical-align: center;
+    margin-left: 2rem;
+    color:black;
+}
+
+.mat-list-item {
+    color:black !important;
+}
+
+.mat-list-item:hover {
+    background: #007ad9 !important;
+}

@@ -1,0 +1,104 @@
+<div class="page">
+    <div class="d-flex box p-3 mt-2">List of web scraped patents</div>
+    <div class="content shadow p-3 position-relative">
+
+        <p-table 
+            #dt1 [value]="patents" 
+            styleClass="p-datatable-gridlines" 
+            [scrollable]="true" 
+            scrollHeight="450px"
+            [paginator]="true" 
+            [rows]="10" 
+            [showCurrentPageReport]="true" 
+            responsiveLayout="scroll"
+            currentPageReportTemplate="Showing {first} to {last} of {totalRecords} entries" 
+            [rowsPerPageOptions]="[10,15]" 
+            [globalFilterFields]="['patentApplicationNumber']">
+
+            <ng-template pTemplate="caption">
+                <div class="flex">
+                    <span class="p-input-icon-left ml-auto">
+                        <i class="pi pi-search"></i>
+                        <input pInputText type="text" (input)="dt1.filterGlobal($any($event.target).value, 'contains')" 
+                            placeholder="Search Patent" />
+                    </span>
+                </div>
+            </ng-template>
+
+            <ng-template pTemplate="header">
+                <tr>
+                    <th pSortableColumn="patentApplicationNumber">
+                        <div class="flex justify-content-center align-items-center">
+                            Application Number 
+                            <p-sortIcon field="patentApplicationNumber"></p-sortIcon>
+                        </div>
+                    </th>
+                    <th pSortableColumn="patentNumber">
+                        Patent Number 
+                        <p-sortIcon field="patentNumber"></p-sortIcon>
+                    </th>
+                    <th pSortableColumn="filingDate">
+                        Filing Date 
+                        <p-sortIcon field="filingDate"></p-sortIcon>
+                    </th>
+                    <!--<th pSortableColumn="abstractText">Abstract Text <p-sortIcon field="abstractText"></p-sortIcon></th>
+                    <th pSortableColumn="grantDate">Grant Date <p-sortIcon field="grantDate"></p-sortIcon></th>
+                    <th pSortableColumn="grantDocumentIdentifier">Grant Identifier <p-sortIcon field="grantDocumentIdentifier"></p-sortIcon></th>-->
+                    <th pSortableColumn="inventionSubjectMatterCategory">
+                        Invention Category 
+                        <p-sortIcon field="inventionSubjectMatterCategory"></p-sortIcon>
+                    </th>
+
+                    <th pSortableColumn="assigneeEntityName">
+                        Assignee 
+                        <p-sortIcon field="assigneeEntityName"></p-sortIcon>
+                    </th>
+                    <th pSortableColumn="assigneePostalAddressText">
+                        Assignee Postal Address 
+                        <p-sortIcon field="assigneePostalAddressText"></p-sortIcon>
+                    </th>
+                    <th pSortableColumn="inventionTitle">
+                        Invention Title 
+                        <p-sortIcon field="inventionTitle"></p-sortIcon>
+                    </th>
+
+                    <th pSortableColumn="s3FilelocationURI">
+                        Patent Document 
+                        <p-sortIcon field="s3FilelocationURI"></p-sortIcon>
+                    </th>
+                </tr>
+            </ng-template>
+            <ng-template pTemplate="body" let-patent>
+                <tr>
+                    <td>{{patent.patentApplicationNumber}}</td>
+                    <td>{{patent.patentNumber}}</td>
+                    <td>{{patent.filingDate}}</td>
+                    <!--<td>
+                        <div style="width: 300px; height: 100px; overflow: auto">
+                            {{patent.abstractText}}
+                            <p-scrollTop 
+                                target="parent" 
+                                behavior="smooth"  
+                                icon="pi pi-arrow-up"
+                                styleClass="custom-scrolltop">
+                            </p-scrollTop>
+                        </div>
+                    </td>
+                    <td>{{patent.grantDate}}</td>
+                    <td>{{patent.grantDocumentIdentifier}}</td>-->
+                    <td>{{patent.inventionSubjectMatterCategory}}</td>
+                    <td>{{patent.assigneeEntityName}}</td>
+                    <td>{{patent.assigneePostalAddressText}}</td>
+                    <td>{{patent.inventionTitle}}</td>
+                    <td><a class="btn btn-link" target="_blank" href="{{patent.s3FilelocationURI}}" >
+                            <button type="button" pButton pRipple icon="pi pi-file-pdf" 
+                                class="p-button-warning mr-2" pTooltip="PDF" tooltipPosition="bottom">
+                            </button>
+                        </a>
+                    </td>
+                </tr>
+            </ng-template>
+        </p-table>    
+        
+    </div>
+  </div>

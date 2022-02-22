@@ -1,0 +1,15 @@
+@import "../patent-list/patent-list.component.css";
+
+.p-inputgroup {
+    padding: 3rem;
+}
+
+.p-button-sm {
+    padding: 2rem;
+    margin-left: 500px;
+
+}
+
+.message {
+    padding: 0.5rem;
+}

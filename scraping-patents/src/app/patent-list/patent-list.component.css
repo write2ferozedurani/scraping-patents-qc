@@ -1,0 +1,26 @@
+:host ::ng-deep .custom-scrolltop {
+    width: 2rem;
+    height: 2rem;
+    border-radius: 4px;
+    background-color: var(--primary-color); 
+}
+
+:host ::ng-deep .page {
+  color: black;
+  padding: 1.5rem;
+  background: #f1f5f9;
+}
+
+:host ::ng-deep .box {
+    min-height: 80px;
+    background: #f6f6f7;
+    margin: 0 -1rem;
+    font-size: 15px;
+}
+
+:host ::ng-deep .content {
+    min-height: calc(100vh - 130px);
+    border-radius: 10px;
+    margin-top: -2rem;
+    background: white;
+}
