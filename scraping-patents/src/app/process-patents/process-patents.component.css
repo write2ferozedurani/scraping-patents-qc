@@ -11,5 +11,7 @@
 }
 
 .message {
-    padding: 0.5rem;
+    padding-left: 1.5rem;
+    padding-top: 1.5rem;
+    color: green;
 }
