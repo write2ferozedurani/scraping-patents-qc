@@ -6,7 +6,7 @@ export interface Patent {
     assigneePostalAddressText:string;
     inventionTitle:string;
     abstractText: string;
-    s3FilelocationURI: string;
+    filelocationURI: string;
     grantDocumentIdentifier: string;
     grantDate: Date;
     patentNumber: string;
